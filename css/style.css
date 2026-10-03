@@ -52,10 +52,10 @@ em{font-style:normal;color:var(--acc)}
 .reveal.is-in{opacity:1;transform:none}
 
 /* ============ header ============ */
-.site-head{position:fixed;inset-inline:0;top:0;z-index:50;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
-.site-head.is-solid{background:rgba(11,13,15,.86);backdrop-filter:blur(14px);border-color:var(--line-soft)}
+.site-head{position:fixed;inset-inline:0;top:0;z-index:50;transition:background .4s,border-color .4s;border-bottom:1px solid transparent;background:linear-gradient(180deg,rgba(11,13,15,.72),rgba(11,13,15,0))}
+.site-head.is-solid{background:rgba(11,13,15,.92);backdrop-filter:blur(14px);border-color:var(--line-soft)}
 .head-in{display:flex;align-items:center;gap:32px;height:72px}
-.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-d);font-weight:800;font-size:19px;letter-spacing:.06em}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-d);font-weight:800;font-size:19px;letter-spacing:.06em;position:relative;z-index:3}
 .brand b{color:var(--acc)}
 .brand-mark{width:24px;height:24px;color:var(--acc)}
 .head-nav{display:flex;gap:26px;margin-inline:auto}
