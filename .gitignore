@@ -1,0 +1,42 @@
+# ECODIESEL látványterv repó — csak az oldal által használt fájlok tartoznak ide
+# (munkafájlok, belső DAEKON dokumentáció, nem használt tartalékvizuálok kimaradnak)
+.daekon/
+.freebuff/
+*.mjs
+*.json
+contactsheet.html
+localsheet.html
+qa.html
+cities.txt
+map-path.txt
+Thumbs.db
+.DS_Store
+
+# Nem használt tartalékképek (Wikimedia-forrás, CREDITS.md tartalék-lista)
+assets/img/bucket-wheel.jpg
+assets/img/mine-aerial.jpg
+assets/img/mine-crawler.jpg
+assets/img/belaz.jpg
+assets/img/haul-cylinder.jpg
+assets/img/haul-hoses.jpg
+assets/img/roller-bali.jpg
+assets/img/roller-asphalt.jpg
+assets/img/rail-sunset.jpg
+assets/img/rail-day.jpg
+assets/img/marine-baudouin.jpg
+assets/img/genset-olympian.jpg
+assets/img/genset-silent.jpg
+assets/img/warehouse.jpg
+assets/img/forklift-container.jpg
+assets/img/loader-kramer.jpg
+assets/img/loader-cat.jpg
+assets/img/loco-v12.jpg
+assets/img/loco-te25.jpg
+assets/img/gauges.jpg
+assets/img/hero-turbo.jpg
+assets/img/turbo.jpg
+assets/img/injector.jpg
+assets/img/injector.jpg
+assets/img/mining.jpg
+assets/img/marine-engine.jpg
+assets/img/tractor-agrotron.jpg
