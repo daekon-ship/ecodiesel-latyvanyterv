@@ -321,7 +321,8 @@ em{font-style:normal;color:var(--acc)}
   .hero-cta{flex-direction:column;align-items:stretch}
   .btn{justify-content:center}
   .hero-stats{grid-template-columns:1fr 1fr;margin-top:40px}
-  .stat{padding:18px 16px 20px}
+  .stat{padding:18px 16px 20px;min-width:0}
+  .stat-num{font-size:clamp(24px,6.6vw,32px)}
   .stat:nth-child(odd){border-left:0;padding-left:0}
   .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .hero-scroll{display:none}
