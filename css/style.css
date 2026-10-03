@@ -314,7 +314,7 @@ em{font-style:normal;color:var(--acc)}
 @media (max-width:760px){
   body{font-size:16px}
   .hero{min-height:100svh}
-  .hero-title{font-size:clamp(27px,8.6vw,54px);letter-spacing:-.01em}
+  .hero-title{font-size:clamp(24px,7.8vw,52px);letter-spacing:-.01em}
   .ht-line{overflow-wrap:break-word}
   .hero-kicker{font-size:10.5px;gap:10px;flex-wrap:wrap}
   .hero-sub{margin:20px 0 26px}
