@@ -213,7 +213,7 @@ em{font-style:normal;color:var(--acc)}
   padding:clamp(18px,3vw,44px);margin-bottom:26px;overflow:hidden}
 .gauge-cluster{max-width:920px;margin:0 auto}
 .gauges-svg{width:100%;height:auto;display:block}
-.g-label{font:500 12px var(--font-m);letter-spacing:.18em;fill:var(--mut)}
+.g-label{font:500 12px var(--font-m);letter-spacing:.14em;fill:var(--mut)}
 .g-title{font:500 12px var(--font-m);letter-spacing:.22em;fill:var(--dim)}
 .ticks line{stroke:rgba(236,233,225,.25)}
 .ticks.sm line{stroke:rgba(236,233,225,.18)}
