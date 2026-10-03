@@ -225,7 +225,7 @@ em{font-style:normal;color:var(--acc)}
 .bar-fill{fill:var(--acc);opacity:.75}
 .diag-calls{position:absolute;font-size:12px;letter-spacing:.2em;color:var(--acc);padding:8px 12px;border:1px solid var(--acc-line);background:rgba(11,13,15,.72);backdrop-filter:blur(3px)}
 .diag-calls::before{content:"";position:absolute;width:7px;height:7px;background:var(--acc);border-radius:50%;top:-3.5px;left:-3.5px}
-.dc-1{top:9%;left:8%}.dc-2{top:16%;right:10%}.dc-3{top:44%;left:4%}.dc-4{bottom:12%;left:14%}.dc-5{bottom:22%;right:6%}.dc-6{top:38%;right:16%}
+.dc-1{top:9%;left:8%}.dc-2{top:16%;right:10%}.dc-3{top:44%;left:4%}.dc-4{bottom:12%;left:14%}.dc-5{bottom:25%;right:11%}.dc-6{top:38%;right:16%}
 .diag-list{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-right:0}
 .diag-list li{display:flex;align-items:center;gap:14px;padding:20px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font:600 14px/1.35 var(--font-t);letter-spacing:.02em;color:#C6C3BA;margin-bottom:-1px}
 .diag-list li .mono{font-size:11px;color:var(--acc)}
