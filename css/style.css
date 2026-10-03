@@ -57,7 +57,7 @@ em{font-style:normal;color:var(--acc)}
 .head-in{display:flex;align-items:center;gap:32px;height:72px}
 .brand{display:flex;align-items:center;gap:9px;font-family:var(--font-d);font-weight:800;font-size:14px;letter-spacing:.05em;position:relative;z-index:3;white-space:nowrap}
 .brand b{color:var(--acc)}
-.brand-mark{width:21px;height:21px;color:var(--acc);flex-shrink:0}
+.brand-mark{width:29px;height:21px;color:var(--acc);flex-shrink:0;overflow:visible}
 .head-nav{display:flex;gap:26px;margin-inline:auto}
 .head-nav a{font:500 11.25px/1 var(--font-t);letter-spacing:.14em;color:var(--mut);text-transform:uppercase;padding:8px 0;position:relative}
 .head-nav a::after{content:"";position:absolute;left:0;bottom:2px;width:0;height:1px;background:var(--acc);transition:width .3s}
@@ -310,7 +310,7 @@ em{font-style:normal;color:var(--acc)}
   .sticky-bar{display:grid}
   .site-foot{padding-bottom:140px}
   .brand{font-size:11.25px;letter-spacing:.03em;gap:7px}
-  .brand-mark{width:17px;height:17px}
+  .brand-mark{width:25px;height:18px}
 }
 
 /* reduced motion */
