@@ -256,7 +256,7 @@ em{font-style:normal;color:var(--acc)}
 
 /* ============ 09 form ============ */
 .sec-form{background:var(--bg1);border-top:1px solid var(--line-soft)}
-.form-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,100px)}
+.form-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,80px)}
 .form-intro h2{font-size:clamp(32px,3.6vw,54px)}
 .form-intro .lead{color:#C6C3BA;margin:22px 0 18px}
 .form-note{font-size:12px;letter-spacing:.14em;color:#9BA4AA}
@@ -265,7 +265,8 @@ em{font-style:normal;color:var(--acc)}
 .ff-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .ff-field{display:flex;flex-direction:column;gap:8px}
 .ff-field span{font-size:12px;letter-spacing:.18em;color:var(--mut)}
-.ff-field input,.ff-field textarea{background:var(--bg0);border:1px solid var(--line);color:var(--ink);font:400 15.5px/1.5 var(--font-t);padding:14px 16px;transition:border-color .3s;border-radius:0;appearance:none}
+.ff-field{min-width:0}
+.ff-field input,.ff-field textarea{width:100%;min-width:0;background:var(--bg0);border:1px solid var(--line);color:var(--ink);font:400 15.5px/1.5 var(--font-t);padding:14px 16px;transition:border-color .3s;border-radius:0;appearance:none}
 .ff-field input:focus,.ff-field textarea:focus{outline:none;border-color:var(--acc-line)}
 .ff-field input::placeholder,.ff-field textarea::placeholder{color:var(--dim)}
 .ff-file input{padding:11px 14px;font-size:13px;color:var(--mut)}
