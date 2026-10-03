@@ -67,6 +67,7 @@ em{font-style:normal;color:var(--acc)}
 .head-phone:hover{border-color:var(--acc-line);background:var(--acc-dim)}
 .hp-label{font:500 11.5px/1 var(--font-m);letter-spacing:.2em;color:var(--acc)}
 .hp-num{font:700 14.5px/1 var(--font-d);letter-spacing:.02em}
+.hp-mobile-btn{display:none;font:800 13px/1 var(--font-d);letter-spacing:.14em}
 
 /* ============ hero ============ */
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding-top:72px}
@@ -356,9 +357,12 @@ em{font-style:normal;color:var(--acc)}
   .foot-grid{grid-template-columns:1fr;gap:34px}
   .sticky-bar{display:grid}
   .site-foot{padding-bottom:140px}
-  .hp-label{display:none}
-  .head-phone{padding:10px 14px;white-space:nowrap}
-  .hp-num{font-size:13.5px}
+  .hp-label,.hp-num{display:none}
+  .hp-mobile-btn{display:block}
+  .head-phone{padding:12px 18px;background:var(--acc);border-color:var(--acc);color:#0C0F0A}
+  .head-phone:hover{background:#C9FA62;border-color:#C9FA62}
+  .brand{font-size:15.5px;letter-spacing:.04em}
+  .brand-mark{width:20px;height:20px}
 }
 
 /* reduced motion */
