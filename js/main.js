@@ -126,8 +126,9 @@
       }
       var t = document.createElementNS(NS, "text");
       t.setAttribute("x", c[1] + 8); t.setAttribute("y", c[2] + 4);
-      t.setAttribute("class", "g-label");
-      t.setAttribute("font-size", "9");
+      t.setAttribute("class", "g-label" + (c[3] ? "" : " lbl-minor"));
+      t.setAttribute("font-size", c[3] ? "13" : "10");
+      t.setAttribute("fill", c[3] ? "#ECE9E1" : "#8B949B");
       t.textContent = c[0];
       dots.appendChild(t);
     });
