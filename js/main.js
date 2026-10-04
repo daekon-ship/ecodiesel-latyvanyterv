@@ -1,5 +1,5 @@
 /* ============================================================
-   ECODIESEL — interactions
+   DIESEL MOTOR JAVÍTÁS — interactions
    ============================================================ */
 (function () {
   "use strict";

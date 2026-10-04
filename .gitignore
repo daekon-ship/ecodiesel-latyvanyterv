@@ -2,6 +2,7 @@
 # (munkafájlok, belső DAEKON dokumentáció, nem használt tartalékvizuálok kimaradnak)
 .daekon/
 .freebuff/
+_ftpref/
 *.mjs
 *.json
 contactsheet.html
