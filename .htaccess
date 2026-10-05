@@ -3,10 +3,13 @@
 # Production Apache/LiteSpeed konfiguráció (statikus oldal)
 # ============================================================
 
-# FONTOS: HSTS (Strict-Transport-Security) szándékosan NEM szerepel,
-# amíg az SSL-tanúsítvány hibás (NET::ERR_CERT_COMMON_NAME_INVALID).
-# Az SSL javítása után, a https működésének igazolása után kapcsolható be:
-#   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+# ---- HSTS (2026-10-05: SSL-tanúsítvány javítva, Let's Encrypt wildcard) ----
+# Védelem a https://dieselmotorjavitas.hu és https://www.dieselmotorjavitas.hu látogatásokra.
+# SZÁNDEKOSAN includeSubDomains NÉLKÜL: a mail/webmail/wepanel aldomaineket a
+# tárhelyszolgáltató menedzseli és korábban már volt hibás a certjük — egy
+# böngészőbe gyorsított HSTS nem fordítható vissza gyorsan, nem kockáztatjuk
+# a webmail/panel hozzáférés kitiltását.
+Header always set Strict-Transport-Security "max-age=31536000"
 
 # ---- Biztonsági headerek ----
 <IfModule mod_headers.c>
