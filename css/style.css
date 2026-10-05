@@ -233,8 +233,7 @@ em{font-style:normal;color:var(--acc)}
 .ff-field input,.ff-field textarea{width:100%;min-width:0;background:var(--bg0);border:1px solid var(--line);color:var(--ink);font:400 13.5px/1.5 var(--font-t);padding:11px 14px;transition:border-color .3s;border-radius:0;appearance:none}
 .ff-field input:focus,.ff-field textarea:focus{outline:none;border-color:var(--acc-line)}
 .ff-field input::placeholder,.ff-field textarea::placeholder{color:var(--dim)}
-.ff-file input{padding:9px 12px;font-size:11px;color:var(--mut)}
-.ff-file input::file-selector-button{background:none;border:1px solid var(--acc-line);color:var(--acc);font:600 11px var(--font-m);letter-spacing:.1em;padding:7px 12px;margin-right:12px;cursor:pointer}
+.ff-note{font-size:11px;letter-spacing:.16em;color:var(--mut);margin:0}
 .ff-check{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.16em;color:var(--mut);cursor:pointer}
 .ff-check input{width:17px;height:17px;min-width:17px;accent-color:#B7F04A;cursor:pointer}
 .ff-status{min-height:18px;font-size:11px;color:var(--acc)}

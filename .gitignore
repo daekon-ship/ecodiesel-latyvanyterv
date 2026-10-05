@@ -1,5 +1,13 @@
 # ECODIESEL látványterv repó — csak az oldal által használt fájlok tartoznak ide
 # (munkafájlok, belső DAEKON dokumentáció, nem használt tartalékvizuálok kimaradnak)
+# Titkok és tanúsítványok soha nem kerülnek a repóba
+.env
+.env.*
+*.key
+*.pem
+*.log
+backup/
+backups/
 .daekon/
 .freebuff/
 _ftpref/
