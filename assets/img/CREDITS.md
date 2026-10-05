@@ -24,7 +24,6 @@
 | generator.jpg | Dízelmotoros aggregátor | File:Caterpillar (Olympian) Generator Set.jpg | Gregsedits | CC BY-SA 3.0 |
 | marine.jpg | Hajódízelmotor (Baudouin) | File:Baudouin marine propulsion diesel engine model 6M26.3 (01).jpg | S.J. de Waard | CC BY-SA 4.0 |
 | marine-ecu.jpg | Motorelektronika / motorvezérlő a motoron | File:Baudouin marine propulsion diesel engine model 6M26.3 (02).jpg | S.J. de Waard | CC BY-SA 4.0 |
-| truck-volvo.jpg | Teherautó (Volvo FH) | File:Volvo Truck FH-Semi-trailer truck-01ASD.jpg | Alexander David | CC BY-SA 4.0 |
 | workshop.jpg | Műhely, hengersfej / szerelői munka | File:Close-up view of engine components showcasing detailed mechanical craftsmanship in an automotive workshop setting.jpg | Shixart1985 | CC BY 2.0 |
 
 ## Nem használt, letöltött képek (tartalék)
