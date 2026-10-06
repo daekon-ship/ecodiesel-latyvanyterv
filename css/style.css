@@ -33,7 +33,7 @@ body{
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
 }
-img{max-width:100%;height:auto;display:block}
+img{max-width:100%;height:auto;display:block;box-sizing:border-box;margin-left:auto;margin-right:auto}
 a{color:inherit;text-decoration:none}
 ul,ol{margin:0;padding:0;list-style:none}
 h1,h2,h3{margin:0;font-family:var(--font-d);font-weight:800;line-height:1.02;letter-spacing:-.015em;text-transform:uppercase}
@@ -133,7 +133,7 @@ em{font-style:normal;color:var(--acc)}
 .bn-side{font-size:11px;line-height:1.7;color:var(--mut);letter-spacing:.18em;padding-top:6px;border-left:1px solid var(--acc-line);padding-left:16px}
 .deutz-copy h2{font-size:clamp(21px,2.3vw,32px)}
 .deutz-copy .lead{color:#C6C3BA;margin:18px 0 24px;max-width:56ch}
-.deutz-img{position:relative;margin:0;border:1px solid var(--line)}
+.deutz-img{position:relative;margin:0;border:1px solid var(--line);overflow:hidden}
 .deutz-img img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;filter:grayscale(.3) contrast(1.05)}
 .deutz-img figcaption{position:absolute;left:0;bottom:0;right:0;padding:12px 16px;font-size:11px;letter-spacing:.2em;color:var(--mut);background:linear-gradient(0deg,rgba(11,13,15,.85),transparent)}
 
@@ -191,7 +191,7 @@ em{font-style:normal;color:var(--acc)}
 .hu-dots circle.pulse{animation:dotpulse 2.6s ease-out infinite;transform-origin:center;transform-box:fill-box}
 @keyframes dotpulse{0%{r:3;opacity:.85}70%{r:11;opacity:0}100%{r:11;opacity:0}}
 .map-meta{display:flex;justify-content:space-between;gap:12px;margin-top:14px;font-size:11px;color:var(--dim);letter-spacing:.18em;flex-wrap:wrap}
-.mobile-photo{margin:0;position:relative;border:1px solid var(--line)}
+.mobile-photo{margin:0;position:relative;border:1px solid var(--line);overflow:hidden}
 .mobile-photo img{width:100%;aspect-ratio:21/8;object-fit:cover;filter:grayscale(.35) brightness(.85)}
 .mobile-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;font-size:11px;letter-spacing:.2em;color:#D5D2C9;background:linear-gradient(0deg,rgba(11,13,15,.92) 30%,transparent)}
 
