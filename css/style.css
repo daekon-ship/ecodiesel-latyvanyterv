@@ -248,6 +248,8 @@ em{font-style:normal;color:var(--acc)}
 .foot-col a:hover{color:var(--acc)}
 .foot-h{font-size:11px;color:var(--dim);letter-spacing:.22em;margin-bottom:6px}
 .foot-note{grid-column:1/-1;display:flex;justify-content:center;text-align:center;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line-soft);padding-top:16px;font-size:11.5px;color:#9BA4AA;letter-spacing:.08em}
+.foot-note a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(155,164,170,.45);transition:color .3s}
+.foot-note a:hover{color:var(--acc)}
 .foot-note a{color:var(--mut);text-decoration:underline;text-underline-offset:3px}
 .foot-note a:hover{color:var(--acc)}
 
