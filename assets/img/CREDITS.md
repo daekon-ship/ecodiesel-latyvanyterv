@@ -7,7 +7,6 @@
 | hero-engine.jpg | Modern közúti dízelmotor (Deutz TCD L6) | File:Deutz TCD L6 4V 01.jpg | VoidWanderer | CC BY-SA 4.0 |
 | engine-cta.jpg | Dízelmotor másik nézet | File:Deutz TCD L6 4V 02.jpg | VoidWanderer | CC BY-SA 4.0 |
 | deutz-industrial.jpg | Ipari dízelmotor hengersfejjel | File:Deutz-motor.jpg | Steffenhege | CC BY-SA 3.0 |
-| engine-cutaway.jpg | Dízelmotor metszeti képe | File:Cummins Turbo Diesel cutaway.jpg | Trasd | CC BY-SA 3.0 |
 | engine-deutz-museum.jpg | DEUTZ dízelmotor (múzeumi példány) | File:Curioseum engine Deutz MIH 232.jpg | ZeroIn | CC BY-SA 4.0 |
 | heritage.jpg | Nagy ipari dízelmotor, történeti felvétel | File:Diesel Engines of the Láng Machine Factory in 1910.jpg | Pesti Hírlap | Public domain |
 | tractor.jpg | Mezőgazdasági traktor (Deutz-Fahr Agrotron) | File:Deutz-Fahr Agrotron 5120C.jpg | JoachimKohler-HB | CC BY-SA 4.0 |
