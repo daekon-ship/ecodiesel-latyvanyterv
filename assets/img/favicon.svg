@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <title>Diesel Motor Javítás</title>
+  <rect width="32" height="32" fill="#0B0D0F"/>
+  <g fill="#B7F04A">
+    <polygon points="10,4 18,4 18,11 10,11"/>
+    <polygon points="2,11 19,11 23,14 28,14 28,24 23,24 21,26 7,26 5,24 2,24"/>
+    <polygon points="28,15 30,15 30,21 28,21"/>
+  </g>
+  <circle cx="18.5" cy="19.5" r="3.6" fill="#0B0D0F"/>
+</svg>
