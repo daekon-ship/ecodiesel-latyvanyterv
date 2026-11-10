@@ -33,26 +33,32 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20261006">
+<link rel="stylesheet" href="css/style.css?v=20261110">
 </head>
 <body>
 
 <div class="grain" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs><clipPath id="dmj-hx"><path d="M24 .5 L44.35 12.25 V35.75 L24 47.5 L3.65 35.75 V12.25Z"/></clipPath></defs>
+  <symbol id="dmj-mark" viewBox="0 0 48 48">
+    <path d="M24 2 L43.2 13 V35 L24 46 L4.8 35 V13Z" fill="none" stroke="currentColor" stroke-width="2.6"/>
+    <path clip-path="url(#dmj-hx)" d="M50 38.4 L24 53.4 L15.6 44.9 L41.6 29.9Z" fill="currentColor"/>
+    <path fill="currentColor" fill-rule="evenodd" d="M15.5 11h17v2.9h-17zM15.5 15.3h17v1.6h-17zM15.5 18.3h17V22h-17zM21.8 22h4.4l1.75 7.5A5.2 5.2 0 1 1 20.05 29.5zM24 29.9a2.1 2.1 0 1 0 0 4.2a2.1 2.1 0 1 0 0-4.2z"/>
+  </symbol>
+</svg>
 
 <header class="site-head" id="top">
   <div class="wrap head-in">
     <a class="brand" href="#top" aria-label="Diesel motor javítás — vissza az oldal tetejére">
-      <svg class="brand-mark" viewBox="0 0 44 32" aria-hidden="true">
-        <path d="M6 11h20l6 5h6v10h-6l-3 3H10l-3-3H3V15h3z" fill="currentColor" opacity=".16"/>
-        <path d="M6 11h20l6 5h6v10h-6l-3 3H10l-3-3H7v-3H3v-8h3zM13 11V6h10v5M38 18h3v6h-3M14 17h10v6H14z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="28.5" cy="21" r="2.4" fill="currentColor"/>
-      </svg>
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#dmj-mark"/></svg>
       <span class="brand-txt">DIESEL MOTOR <b>JAVÍTÁS</b></span>
     </a>
     <nav class="head-nav" aria-label="Fő navigáció">
       <a href="#gepek">Szakértelem</a>
       <a href="#deutz">DEUTZ</a>
       <a href="#geptipusok">Géptípusok</a>
+      <a href="#motorok">Motorok</a>
+      <a href="#munkaink" data-gal-link hidden>Munkáink</a>
       <a href="#mobil">Mobil szerviz</a>
     </nav>
   </div>
@@ -254,11 +260,78 @@
   </div>
 </section>
 
-<!-- ============ 05 · ORSZÁGOS MOBIL SZERVIZ ============ -->
-<section class="sec sec-mobile" id="mobil">
+
+<!-- ============ 05 · JAVÍTOTT MOTOROK ============ -->
+<section class="sec sec-makes" id="motorok">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-no mono">05</span>
+      <span class="sec-tag mono">JAVÍTOTT MOTOROK</span>
+    </div>
+    <div class="makes-grid">
+      <div class="makes-intro">
+        <h2 class="reveal">NEM EGY MÁRKÁRA<br><em>ESKÜDTÜNK FEL.</em></h2>
+        <p class="lead reveal">Ezek a motorok mind megfordultak a kezünk alatt — a kis kompakt motortól a bányagép V12-eséig. Ami nincs a listán, arról is érdemes telefonálni.</p>
+      </div>
+      <ol class="makes-list" aria-label="Javított motormárkák">
+        <li class="mk-item reveal"><span class="mk-no mono">01</span><span class="mk-name">Deutz</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">02</span><span class="mk-name">Perkins</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">03</span><span class="mk-name">Caterpillar</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">04</span><span class="mk-name">Liebherr</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">05</span><span class="mk-name">Ford</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">06</span><span class="mk-name">Mercedes-Benz</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">07</span><span class="mk-name">Kubota</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">08</span><span class="mk-name">Yanmar</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">09</span><span class="mk-name">Volvo</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">10</span><span class="mk-name">John Deere</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">11</span><span class="mk-name">MMZ Belarus</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">12</span><span class="mk-name">Mitsubishi</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">13</span><span class="mk-name">Isuzu</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">14</span><span class="mk-name">Mazda</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">15</span><span class="mk-name">Cummins</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">16</span><span class="mk-name">Same</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">17</span><span class="mk-name">VM Motori</span></li>
+        <li class="mk-item reveal"><span class="mk-no mono">18</span><span class="mk-name">MWM</span></li>
+      </ol>
+    </div>
+
+    <aside class="beast reveal" aria-label="Kiemelt munka: JaMZ-240">
+      <div class="beast-plate">
+        <span class="mono beast-k">KIEMELT MUNKA</span>
+        <span class="beast-name">JaMZ-240</span>
+        <span class="mono beast-spec">V12 · KB. 15 LITER · BELAZ / K-701</span>
+      </div>
+      <p class="beast-txt"><b>A nagy szörnyeteg.</b> A szovjet nehézgépek V12-es dízele bányadömperekben és K-701 Kirovec traktorokban dolgozik. Ilyen motort szétszedni és újra életre kelteni nem mindennapi feladat — nálunk megtörtént.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ 06 · MUNKÁINK (GALÉRIA) ============ -->
+<section class="sec sec-gallery" id="munkaink" hidden>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-no mono">06</span>
+      <span class="sec-tag mono">MUNKÁINK</span>
+    </div>
+    <div class="gal-head">
+      <h2 class="reveal">A MŰHELYBŐL.<br><em>SZÉPÍTÉS NÉLKÜL.</em></h2>
+      <p class="lead reveal">Valódi munkák, valódi motorok — szétszedve, felújítva, újra járatva.</p>
+    </div>
+    <div class="gal" id="gallery"></div>
+  </div>
+  <div class="lb" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Kép nagyítva">
+    <button class="lb-x" type="button" aria-label="Bezárás">×</button>
+    <button class="lb-nav lb-prev" type="button" aria-label="Előző kép">←</button>
+    <figure class="lb-fig"><img alt=""><figcaption class="mono"></figcaption></figure>
+    <button class="lb-nav lb-next" type="button" aria-label="Következő kép">→</button>
+  </div>
+</section>
+
+<!-- ============ 07 · ORSZÁGOS MOBIL SZERVIZ ============ -->
+<section class="sec sec-mobile" id="mobil">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-no mono">07</span>
       <span class="sec-tag mono">ORSZÁGOS MOBIL SZERVIZ</span>
     </div>
     <div class="mobile-grid">
@@ -300,10 +373,10 @@
   </div>
 </section>
 
-<!-- ============ 07 · MŰHELY + HELYSZÍN ============ -->
+<!-- ============ 08 · MŰHELY + HELYSZÍN ============ -->
 <section class="sec sec-split" id="muhely">
   <div class="sec-head wrap reveal">
-    <span class="sec-no mono">07</span>
+    <span class="sec-no mono">08</span>
     <span class="sec-tag mono">MŰHELY ÉS HELYSZÍN</span>
   </div>
   <div class="split">
@@ -315,6 +388,7 @@
       </div>
     </div>
     <div class="split-mid reveal">
+      <svg class="sm-mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#dmj-mark"/></svg>
       <span class="sm-brand">DIESEL MOTOR JAVÍTÁS</span>
       <span class="sm-line mono">MINDKÉT HELYZETRE<br>MEGOLDÁS.</span>
     </div>
@@ -328,23 +402,26 @@
   </div>
 </section>
 
-<!-- ============ 08 · KAPCSOLAT / HIBABEJELENTÉS ============ -->
+<!-- ============ 09 · KAPCSOLAT / HIBABEJELENTÉS ============ -->
 <section class="sec sec-contact" id="kapcsolat">
   <div class="contact-bg" aria-hidden="true">
     <img src="assets/img/engine-cta.jpg" alt="" width="1920" height="1440" loading="lazy">
   </div>
   <div class="wrap contact-in">
     <div class="sec-head reveal">
-      <span class="sec-no mono">08</span>
+      <span class="sec-no mono">09</span>
       <span class="sec-tag mono">HIBABEJELENTÉS</span>
     </div>
     <h2 class="contact-title reveal">ÁLL A GÉP?<br><em>NE VESZÍTSE AZ IDŐT.</em></h2>
-    <a class="contact-phone reveal" href="tel:+36703677072">+36 70 367 7072</a>
+    <div class="contact-phones reveal">
+      <a class="contact-phone" href="tel:+36703677072">+36 70 367 7072</a>
+      <a class="contact-phone contact-phone-2" href="tel:+36707450172">+36 70 745 0172</a>
+    </div>
     <div class="contact-cta reveal">
       <a class="btn btn-solid btn-xl" href="tel:+36703677072">HÍVÁS MOST</a>
       <a class="btn btn-line" href="#hibabejelentes">VAGY ÍRJON NEKÜNK ↓</a>
     </div>
-    <p class="contact-who reveal mono">SZATMÁRI LAJOS · DIESEL MOTOR JAVÍTÁS · szatmari1974@gmail.com</p>
+    <p class="contact-who reveal mono">SZATMÁRI LAJOS · ECODIESEL KFT. · szatmari1974@gmail.com</p>
   </div>
 </section>
 
@@ -352,7 +429,7 @@
   <div class="wrap form-grid">
     <div class="form-intro">
       <div class="sec-head reveal">
-        <span class="sec-no mono">09</span>
+        <span class="sec-no mono">10</span>
         <span class="sec-tag mono">EGY PERC — ÉS HÍVUNK</span>
       </div>
       <h2 class="reveal">HIBA­BEJELENTÉS</h2>
@@ -383,11 +460,7 @@
   <div class="wrap foot-grid">
     <div class="foot-brand">
       <a class="brand" href="#top">
-        <svg class="brand-mark" viewBox="0 0 44 32" aria-hidden="true">
-          <path d="M6 11h20l6 5h6v10h-6l-3 3H10l-3-3H3V15h3z" fill="currentColor" opacity=".16"/>
-          <path d="M6 11h20l6 5h6v10h-6l-3 3H10l-3-3H7v-3H3v-8h3zM13 11V6h10v5M38 18h3v6h-3M14 17h10v6H14z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="28.5" cy="21" r="2.4" fill="currentColor"/>
-        </svg>
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#dmj-mark"/></svg>
         <span class="brand-txt">DIESEL MOTOR <b>JAVÍTÁS</b></span>
       </a>
       <p class="foot-tag">DÍZELMOTOROK.<br>A TRAKTORTÓL A BÁNYAGÉPIG.</p>
@@ -395,6 +468,7 @@
     <div class="foot-col">
       <span class="mono foot-h">KAPCSOLAT</span>
       <a href="tel:+36703677072">+36 70 367 7072</a>
+      <a href="tel:+36707450172">+36 70 745 0172</a>
       <a href="mailto:szatmari1974@gmail.com">szatmari1974@gmail.com</a>
       <span>Szatmári Lajos — dízelmotor-specialista</span>
     </div>
@@ -403,9 +477,15 @@
       <a href="#gepek">Dízelmotor-diagnosztika</a>
       <a href="#mobil">Országos mobil szerviz</a>
       <a href="#deutz">DEUTZ tapasztalat</a>
+      <a href="#motorok">Javított motorok</a>
+    </div>
+    <div class="foot-col">
+      <span class="mono foot-h">CÉGADATOK</span>
+      <span>Ecodiesel Kft.</span>
+      <span>H-1149 Budapest,<br>Limanova tér 22. fszt. 2.</span>
     </div>
     <div class="foot-note">
-      <span class="mono">© <span id="year">2026</span> Diesel Motor Javítás – Szatmári Lajos – Minden jog fenntartva.</span>
+      <span class="mono">© <span id="year">2026</span> Ecodiesel Kft. – Diesel Motor Javítás – Szatmári Lajos – Minden jog fenntartva.</span>
       <span class="mono">Készítette: <a href="https://daekon.hu" target="_blank" rel="noopener">DAEKON</a></span>
     </div>
   </div>
@@ -424,7 +504,7 @@
   "@id": "https://dieselmotorjavitas.hu/#business",
   "name": "Diesel Motor Javítás",
   "url": "https://dieselmotorjavitas.hu/",
-  "telephone": "+36703677072",
+  "telephone": ["+36703677072", "+36707450172"],
   "email": "szatmari1974@gmail.com",
   "image": "https://dieselmotorjavitas.hu/assets/img/hero-engine.jpg",
   "logo": "https://dieselmotorjavitas.hu/assets/img/logo.png",
@@ -432,7 +512,7 @@
   "description": "Dízelmotor-javítás 2003 óta, a traktortól a bányagépig — 13 év DEUTZ szakszervizes tapasztalat, EURO 5–6 multibrand diagnosztika, országos mobil szerviz.",
   "founder": { "@type": "Person", "name": "Szatmári Lajos", "jobTitle": "Dízelmotor-specialista" },
   "areaServed": { "@type": "Country", "name": "Magyarország" },
-  "knowsAbout": ["Dízelmotor-javítás", "Dízelmotor-diagnosztika", "DEUTZ", "EURO 5", "EURO 6", "Multibrand diagnosztika", "Mobil szerviz"],
+  "knowsAbout": ["Dízelmotor-javítás", "Deutz", "Perkins", "Caterpillar", "Liebherr", "Ford", "Mercedes-Benz", "Kubota", "Yanmar", "Volvo", "John Deere", "MMZ Belarus", "Mitsubishi", "Isuzu", "Mazda", "Cummins", "Same", "VM Motori", "MWM", "JaMZ-240", "Dízelmotor-diagnosztika", "DEUTZ", "EURO 5", "EURO 6", "Multibrand diagnosztika", "Mobil szerviz"],
   "makesOffer": [
     { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dízelmotor-diagnosztika" } },
     { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dízelmotor-javítás" } },
@@ -447,7 +527,10 @@
   "@type": "Organization",
   "@id": "https://dieselmotorjavitas.hu/#organization",
   "name": "Diesel Motor Javítás",
+  "legalName": "Ecodiesel Kft.",
   "url": "https://dieselmotorjavitas.hu/",
+  "address": { "@type": "PostalAddress", "streetAddress": "Limanova tér 22. fszt. 2.", "postalCode": "1149", "addressLocality": "Budapest", "addressCountry": "HU" },
+  "telephone": ["+36703677072", "+36707450172"],
   "logo": "https://dieselmotorjavitas.hu/assets/img/logo.png",
   "image": "https://dieselmotorjavitas.hu/assets/img/logo.png",
   "description": "Dízelmotor-javítás és -diagnosztika 2003 óta, országos mobil szervizzel.",
@@ -455,6 +538,6 @@
   "areaServed": { "@type": "Country", "name": "Magyarország" }
 }
 </script>
-<script src="js/main.js?v=20261006"></script>
+<script src="js/main.js?v=20261110"></script>
 </body>
 </html>

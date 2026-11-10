@@ -10,6 +10,68 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
+
+  /* ============ MUNKÁINK — galéria ============
+     Ügyfél saját fotói: assets/img/munkak/  (nagy kép + _t bélyegkép).
+     Új kép felvétele: egy sor ide, a sorrend = megjelenési sorrend.
+     { f: "fájlnév alap kiterjesztés nélkül", c: "felirat", w: "wide" | "tall" | "" } */
+  var GALLERY = [];
+
+  var galSec = document.getElementById("munkaink");
+  var galEl = document.getElementById("gallery");
+  if (galSec && galEl && GALLERY.length) {
+    galSec.hidden = false;
+    document.querySelectorAll("[data-gal-link]").forEach(function (a) { a.hidden = false; });
+    GALLERY.forEach(function (g, i) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "gal-it" + (g.w ? " gal-" + g.w : "");
+      b.setAttribute("aria-label", "Kép nagyítása: " + (g.c || "munka " + (i + 1)));
+      b.innerHTML = '<img src="assets/img/munkak/' + g.f + '_t.jpg" alt="' + (g.c || "") +
+        '" loading="lazy" decoding="async"><span class="gal-cap mono">' + String(i + 1).padStart(2, "0") +
+        (g.c ? " · " + g.c : "") + "</span>";
+      b.addEventListener("click", function () { openLb(i); });
+      galEl.appendChild(b);
+    });
+
+    var lb = document.getElementById("lightbox");
+    var lbImg = lb.querySelector("img"), lbCap = lb.querySelector("figcaption");
+    var cur = 0, lastFocus = null;
+    function show(i) {
+      cur = (i + GALLERY.length) % GALLERY.length;
+      var g = GALLERY[cur];
+      lbImg.src = "assets/img/munkak/" + g.f + ".jpg";
+      lbImg.alt = g.c || "";
+      lbCap.textContent = String(cur + 1).padStart(2, "0") + " / " + String(GALLERY.length).padStart(2, "0") + (g.c ? " · " + g.c : "");
+    }
+    function openLb(i) {
+      lastFocus = document.activeElement;
+      show(i); lb.hidden = false; document.body.classList.add("lb-open");
+      lb.querySelector(".lb-x").focus();
+    }
+    function closeLb() {
+      lb.hidden = true; document.body.classList.remove("lb-open");
+      if (lastFocus) lastFocus.focus();
+    }
+    lb.querySelector(".lb-x").addEventListener("click", closeLb);
+    lb.querySelector(".lb-prev").addEventListener("click", function () { show(cur - 1); });
+    lb.querySelector(".lb-next").addEventListener("click", function () { show(cur + 1); });
+    lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
+    document.addEventListener("keydown", function (e) {
+      if (lb.hidden) return;
+      if (e.key === "Escape") closeLb();
+      else if (e.key === "ArrowLeft") show(cur - 1);
+      else if (e.key === "ArrowRight") show(cur + 1);
+    });
+    var tx = null;
+    lb.addEventListener("touchstart", function (e) { tx = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener("touchend", function (e) {
+      if (tx === null) return;
+      var dx = e.changedTouches[0].clientX - tx; tx = null;
+      if (Math.abs(dx) > 40) show(cur + (dx < 0 ? 1 : -1));
+    });
+  }
+
   /* header solid on scroll */
   var head = document.querySelector(".site-head");
   function onScrollHead() {
