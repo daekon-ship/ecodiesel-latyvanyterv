@@ -1,0 +1,58 @@
+name: Élesítés FTP-re (dieselmotorjavitas.hu)
+
+# Minden push a main ágra automatikusan feltölti az oldalt a tárhelyre.
+# Kézzel is indítható: Actions → "Élesítés FTP-re" → Run workflow.
+#
+# Szükséges titkok (Settings → Secrets and variables → Actions → New repository secret):
+#   FTP_SERVER    – pl. ftp.dieselmotorjavitas.hu
+#   FTP_USERNAME  – FTP felhasználónév
+#   FTP_PASSWORD  – FTP jelszó
+# Nem kötelező:
+#   FTP_DIR       – célmappa a tárhelyen, perjellel a végén (alapértelmezés: ./public_html/)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ftp-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Titkok ellenőrzése
+        id: check
+        env:
+          S: ${{ secrets.FTP_SERVER }}
+          U: ${{ secrets.FTP_USERNAME }}
+          P: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          if [ -z "$S" ] || [ -z "$U" ] || [ -z "$P" ]; then
+            echo "::warning::Az FTP titkok még nincsenek beállítva – a feltöltés kimarad."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.check.outputs.ok == 'true'
+
+      - name: Feltöltés FTP-re
+        if: steps.check.outputs.ok == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_DIR || './public_html/' }}
+          # csak a változott fájlokat tölti fel; a tárhelyen lévő egyéb fájlokat nem törli
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            tools/**
+            logo.html
+            assets/img/logo/**
