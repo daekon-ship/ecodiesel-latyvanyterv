@@ -58,3 +58,16 @@ jobs:
             assets/img/logo/**
             tetojavitomester.hu/**
             public_html/**
+
+      - name: Ellenőrzés élesben
+        if: steps.check.outputs.ok == 'true'
+        run: |
+          sleep 5
+          curl -sS -L -H "Cache-Control: no-cache" -o live.html "https://dieselmotorjavitas.hu/?deploy=${GITHUB_SHA}"
+          if cmp -s live.html index.html; then
+            echo "✅ Az élő oldal megegyezik a repóval."
+          else
+            echo "::error::Az élő index.html eltér a repóétól – rossz mappába ment a feltöltés?"
+            diff <(head -c 2000 live.html) <(head -c 2000 index.html) | head -20 || true
+            exit 1
+          fi
