@@ -1,0 +1,32 @@
+name: Diagnosztika (domain + FTP mappák)
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/diag.yml"]
+  workflow_dispatch:
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: DNS
+        run: |
+          for h in dieselmotorjavitas.hu www.dieselmotorjavitas.hu we002.tarhely.com; do echo "== $h"; dig +short A $h; dig +short CNAME $h; done
+          echo "== NS"; dig +short NS dieselmotorjavitas.hu
+      - name: Élő oldal
+        run: |
+          for u in https://dieselmotorjavitas.hu/ https://www.dieselmotorjavitas.hu/ http://dieselmotorjavitas.hu/; do
+            echo "== $u"; curl -sS -L -o page.html -w "%{http_code} %{url_effective}\n" "$u" || true
+            curl -sSI -L "$u" | grep -iE "^(server|x-github|via|location|last-modified|x-served|cf-)" || true
+            echo "uj logo (dmj-mark):"; grep -c 'id="dmj-mark"' page.html || true
+            echo "galeria gomb:"; grep -c 'data-gal-open' page.html || true
+            echo "regi galeria szekcio:"; grep -c 'class="sec sec-gallery"' page.html || true
+          done
+      - name: FTP mappák
+        env:
+          S: ${{ secrets.FTP_SERVER }}
+          U: ${{ secrets.FTP_USERNAME }}
+          P: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          echo "== gyoker"; curl -sS --list-only "ftp://$S/" --user "$U:$P" || true
+          echo "== public_html"; curl -sS --list-only "ftp://$S/public_html/" --user "$U:$P" | head -40 || true
+          for d in www web htdocs dieselmotorjavitas.hu domains; do echo "== $d"; curl -sS --list-only "ftp://$S/$d/" --user "$U:$P" 2>&1 | head -20 || true; done
