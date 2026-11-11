@@ -8,7 +8,7 @@ name: Élesítés FTP-re (dieselmotorjavitas.hu)
 #   FTP_USERNAME  – FTP felhasználónév
 #   FTP_PASSWORD  – FTP jelszó
 # Nem kötelező:
-#   FTP_DIR       – célmappa a tárhelyen, perjellel a végén (alapértelmezés: ./public_html/)
+#   FTP_DIR       – célmappa a tárhelyen, perjellel a végén (alapértelmezés: ./ — a tarhely.com-on az FTP gyökér maga a weboldal)
 
 on:
   push:
@@ -47,7 +47,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_DIR || './public_html/' }}
+          server-dir: ${{ secrets.FTP_DIR || './' }}
           # csak a változott fájlokat tölti fel; a tárhelyen lévő egyéb fájlokat nem törli
           exclude: |
             **/.git*
@@ -56,3 +56,5 @@ jobs:
             tools/**
             logo.html
             assets/img/logo/**
+            tetojavitomester.hu/**
+            public_html/**
